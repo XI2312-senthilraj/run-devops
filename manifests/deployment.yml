@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: xisenthilrajrundevops 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xisenthilrajrundevops
+  template:
+    metadata:
+      labels:
+        app: xisenthilrajrundevops 
+    spec:
+      containers:
+        - name: xisenthilrajrundevops 
+          image: redeyecontainerregistry.azurecr.io/xisenthilrajrundevops
+          ports:
+          - containerPort: 80
